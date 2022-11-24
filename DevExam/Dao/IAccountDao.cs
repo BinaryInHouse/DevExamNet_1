@@ -1,6 +1,4 @@
-﻿using DevExam.Model;
-
-namespace DevExam.Dao
+﻿namespace DevExam.Dao
 {
     public interface IAccountDao
     {

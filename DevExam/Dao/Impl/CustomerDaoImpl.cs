@@ -19,7 +19,12 @@ namespace DevExam.Dao.Impl
 
         public List<Customer> GetCustomersThanAccountAmount(double amount)
         {
-            throw new NotImplementedException();
+            var customersThanAccountAmount = (from c in _context.Customers
+             from a in _context.Accounts
+             where c.Id == a.CustomerId
+             where a.Amount < 60
+             select c).ToList();
+            return customersThanAccountAmount;
         }
     }
 }

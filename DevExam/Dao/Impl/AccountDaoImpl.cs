@@ -4,11 +4,13 @@ namespace DevExam.Dao.Impl
 {
     public class AccountDaoImpl : IAccountDao
     {
-        private readonly ApplicationDbContext applicationDbContext;
+        private readonly ApplicationDbContext _applicationDbContext;
 
         public AccountDaoImpl(ApplicationDbContext applicationDbContext)
         {
-            this.applicationDbContext = applicationDbContext;
+            _applicationDbContext = applicationDbContext;
         }
+
+        public ApplicationDbContext ApplicationDbContext => _applicationDbContext;
     }
 }
